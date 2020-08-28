@@ -1,4 +1,12 @@
 body {
   font-family: "Roboto", sans-serif;
 }
+
+form > label {
+  display: block;
+}
+
+form #submit {
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */

@@ -14,16 +14,121 @@
 </head>
 
 <body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   <header>
-    <h1>Restaurant Evaluation Survey</h1>
-    <h2>Please let us know how was the food and service.</h2>
+    <h1 id="title">Restaurant Evaluation Survey</h1>
+    <p id="description">Please let us know how was the food and service.</p>
   </header>
   <main>
-    <form>
-      <label>Day Visited</label>
-      <input type="date" />
-      <label>Dine In / Take Out</label>
-      <input type="date" />
+    <form id="survey-form">
+      <label id="name-label" for="name">Name</label>
+      <input id="name" placeholder="Enter your name" required />
+
+      <label id="email-label" for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label id="number-label" for="number">Age (optional)</label>
+      <input type="number" id="number" min="10" max="99" placeholder="Age" />
+
+      <label for="day-visited">Day Visited</label>
+      <input type="date" id="day-visited" />
+
+      <label for="dropdown">Dine In / Take Out</label>
+      <select id="dropdown">
+        <option value="" selected>Select an option</option>
+        <option value="dine-in">Dine In</option>
+        <option value="take-out">Take Out</option>
+      </select>
+
+      <p>Would you recommend the restaurant to a friend?</p>
+
+      <div>
+        <input
+          type="radio"
+          id="definitely"
+          name="recommend"
+          value="definitely"
+          checked
+        />
+        <label for="definitely">Definitely</label>
+      </div>
+
+      <div>
+        <input type="radio" id="maybe" name="recommend" value="maybe" />
+        <label for="maybe">Maybe</label>
+      </div>
+
+      <div>
+        <input type="radio" id="not-sure" name="recommend" value="not-sure" />
+        <label for="not-sure">Not sure</label>
+      </div>
+
+      <p>What would you like to see improved? (Check all that apply)</p>
+
+      <div>
+        <input
+          type="checkbox"
+          id="food-quality"
+          name="improvements"
+          value="food-quality"
+        />
+        <label for="food-quality">Food Quality</label>
+      </div>
+
+      <div>
+        <input
+          type="checkbox"
+          id="service-quality"
+          name="improvements"
+          value="service-quality"
+        />
+        <label for="service-quality">Overall Service Quality</label>
+      </div>
+
+      <div>
+        <input
+          type="checkbox"
+          id="cleanliness"
+          name="improvements"
+          value="cleanliness"
+        />
+        <label for="cleanliness">Cleanliness</label>
+      </div>
+
+      <div>
+        <input
+          type="checkbox"
+          id="order-accuracy"
+          name="improvements"
+          value="order-accuracy"
+        />
+        <label for="order-accuracy">Order Accuracy</label>
+      </div>
+
+      <div>
+        <input
+          type="checkbox"
+          id="speed-service"
+          name="improvements"
+          value="speed-service"
+        />
+        <label for="speed-service">Speed of Service</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="value" name="improvements" value="value" />
+        <label for="value">Value</label>
+      </div>
+
+      <label for="comments">Any comments, questions or suggestions?</label>
+      <textarea
+        id="comments"
+        rows="5"
+        cols="33"
+        placeholder="Enter your comment here..."
+      ></textarea>
+
+      <button type="submit" id="submit">Submit</button>
     </form>
   </main>
 </body>
