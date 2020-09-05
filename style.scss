@@ -1,13 +1,116 @@
+:root {
+  --white: #fbfbfb;
+}
+
+html {
+  font-size: 10px;
+  position: relative;
+  background: url("img/restaurant.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+html::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #713523b8;
+  z-index: -1;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
+  font: 2rem "Kufam", cursive;
+  color: var(--white);
+}
+
+header {
+  text-align: center;
+  h1 {
+    margin: 6rem 0 0.5rem 0;
+  }
+  p {
+    margin: 0 0 4rem 0;
+    font-style: italic;
+  }
+}
+
+@media (min-width: 860px) {
+  main {
+    width: 770px;
+    padding: 1rem 4rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 860px) {
+  main {
+    width: 550px;
+    padding: 1rem 4rem;
+  }
+}
+
+@media (min-width: 530px) and (max-width: 640px) {
+  main {
+    padding: 1rem 4rem;
+  }
+}
+
+@media (max-width: 530px) {
+  main {
+    padding: 1rem;
+  }
+}
+
+main {
+  margin: 0 auto;
+  background-color: #712e23c7;
+  border-radius: 2rem;
 }
 
 form {
   & > label {
     display: block;
+    padding: 3rem 0 1rem 0;
+  }
+
+  p {
+    padding: 3rem 0 1rem 0;
+    margin: 0;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    font: 2rem "Kufam", cursive;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    background-color: var(--white);
+    border: 0;
+    color: #5f5f5f !important;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 2.3rem;
+    height: 2.3rem;
+    margin: 0.5rem;
+    vertical-align: middle;
   }
 
   #submit {
     display: block;
+    margin: 2rem 0;
+    height: 5rem;
+    width: 100%;
+    font: 2rem "Kufam", cursive;
+    cursor: pointer;
+    background-color: rgb(46, 156, 46);
+    border-radius: 1rem;
+    color: var(--white);
+    border: 0;
   }
 }
